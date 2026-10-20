@@ -1,4 +1,4 @@
-package br.com.marceloflp.spring_boot_with_cache;
+package br.com.marceloflp.spring_boot_with_cache.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

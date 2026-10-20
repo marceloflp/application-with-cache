@@ -3,6 +3,7 @@ package br.com.marceloflp.spring_boot_with_cache.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import br.com.marceloflp.spring_boot_with_cache.entities.Produto;
@@ -21,6 +22,7 @@ public class ProdutoService {
         return produtoRepository.save(produto);
     }
 
+    @Cacheable("produtos")
     public List<Produto> listarTodos() {
         return produtoRepository.findAll();
     }
